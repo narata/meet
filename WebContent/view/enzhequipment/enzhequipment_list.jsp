@@ -22,22 +22,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <div class="container">
 <form class="form-inline" role="form" action="enquipmentListServlet" method="post">
-  <div class="form-group">
-    <label class=" col-xs-6" for="">名称</label>
-    
-    <input type="text" name="enzhequipmentName" class="form-control" id="" placeholder="请输入设备名称">
+  <div class="form-group ">
+    <input type="text" name="enzhequipmentName" class="form-control col-xs-6" id="" placeholder="请输入设备名称">
   </div>
   <div class="form-group">
-    <label class="col-xs-6" for="">所属会议室</label>
-   	<select name="meetingroomId" class="form-control">
-   		<option value="">请选择</option>
+   	<select name="meetingroomId" class="form-control col-xs-6">
+   		<option value="">请选择会议室</option>
    		<c:forEach items="#{meetroomlist }" var="meet">
    		<option value="${meet.meetingroomId }">${meet.meetingroomName }</option>
    		</c:forEach>
    	</select>
   </div>
    <div class="form-group">
-    <label class="col-xs-6" for="">&nbsp;</label>
     <button type="submit" class="btn btn-default">查询</button>
   </div>
   
